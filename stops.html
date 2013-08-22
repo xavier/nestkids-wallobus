@@ -7,32 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallobus</title>
     <link href="vendor/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="vendor/jasny-bootstrap/bootstrap-rowlink.min.css" rel="stylesheet" media="screen">
     <link href="css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="vendor/html5shiv/3.6.2/html5shiv.min.js"></script>
       <script src="vendor/respond/1.2.0/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="with-alertbar">
+  <body>
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="row">
-          <div class="col-xs-4 col-md-4 btn-left"></div>
+          <div class="col-xs-4 col-md-4 btn-left">
+            <a id="btn-back" class="btn btn-default navbar-btn" href="index.html"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          </div>
           <div class="col-xs-4 col-md-4 brand-col"><a class="navbar-brand" href="index.html">Wallobus</a></div>
-          <div class="col-xs-4 col-md-4 btn-right"></div>
+          <div class="col-xs-4 col-md-4 btn-right">
+            <a id="btn-back" class="btn btn-default navbar-btn" href="account.html"><i class="glyphicon glyphicon-cog"></i></a>
+          </div>
         </div>
       </div>
     </nav>
 
     <div id="container" class="container">
-      <h1>Welcome to Wallobus!</h1>
+      <h1 class="hidden-xs">Stops</h1>
 
-      <a class="btn btn-lg btn-block btn-primary" href="stops.html">Stops</a>
-      <a class="btn btn-lg btn-block btn-primary" href="itinary.html">Itinary</a>
+      <div id="stops-results"></div>
     </div>
+
+  <script id="stops-results-template" type="text/x-handlebars-template">
+    <table id="stops-results" class="table table-striped" data-provides="rowlink">
+      <thead>
+        <tr>
+          <th class="col1 col-xs-5 col-md-5">Stop name</th>
+          <th class="col2 col-xs-5 col-md-5">Lines</th>
+          <th class="col3 col-xs-2 col-md-2">Distance</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+          <tr>
+            <td class="col1"><a class="btn btn-xs btn-link" href="#">{{name}}</a></td>
+            <td class="col2">
+              {{#each lines}}
+                <span class="label label-primary">{{this}}</span>
+              {{/each}}
+            </td>
+            <td class="col3">{{distance}}km</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </script>
 
 <!--
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -40,9 +69,12 @@
 -->
     <script src="vendor/jquery/1.10.2/jquery.min.js"></script>
     <script src="vendor/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="vendor/jasny-bootstrap/bootstrap-rowlink.min.js"></script>
+    <script src="vendor/handlebars/1.0.0/handlebars.js"></script>
     <script src="js/main.js"></script>
     <script>
       $(document).ready(function() {
+        stops_loadDatagrid();
       });
     </script>
   </body>

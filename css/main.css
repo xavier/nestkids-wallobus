@@ -81,3 +81,13 @@ body.with-alertbar {
 .carousel .carousel-indicators li.active {
   background-color: #3276B1;
 }
+
+#stops-results .col3 {
+  text-align: right;
+}
+#stops-results tbody .col1 {
+  font-weight: bold;
+}
+#stops-results .label {
+  font-size: inherit !important;
+}

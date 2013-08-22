@@ -1,27 +1,32 @@
 [
 	{
+		"id": "Bbwacol2",
 		"name": "BASSE-WAVRE Collège",
 		"lines": ["38", "125"],
 		"distance": 0.3
 	},
 	{
+		"id": "Bgzdcwa2",
 		"name": "GREZ-DOICEAU Chaussée de Wavre",
 		"lines": ["13", "38", "125", "543"],
 		"distance": 1.6
 	},
 	{
+		"id": "Bhanwav2",
 		"name": "HANNUT Chaussée de Wavre 50",
 		"lines": ["24"],
 		"distance": 2.2
 	},
 	{
+		"id": "Blthwav4",
 		"name": "LATHUY Chaussée de Wavre",
 		"lines": ["38", "125"],
 		"distance": 3.4
 	},
 	{
+		"id": "LMAwavr2",
 		"name": "MALMEDY Route de Wavreumont",
 		"lines": ["13", "24", "38", "125", "543"],
 		"distance": 5.1
-	},
+	}
 ]
