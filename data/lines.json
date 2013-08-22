@@ -1,0 +1,22 @@
+[
+  {
+    "number": "998",
+    "direction": "Vers Gembloux",
+    "time" : "12:42"
+  },
+  {
+    "number": "999",
+    "direction": "Vers Namur",
+    "time" : "12:51"
+  },
+  {
+    "number": "W",
+    "direction": "Vers Waterloo",
+    "time" : "15:42"
+  },
+  {
+    "number": "Z",
+    "direction": "Vers Zétrud-Lumay",
+    "time" : "13:42"
+  }
+]

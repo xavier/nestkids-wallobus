@@ -22,6 +22,12 @@ function stops_loadDatagrid()
 	$.ajax({url: url, success: stops_loadDatagrid_success});
 }
 
+function lines_loadDatagrid()
+{
+	var url = apiRootUrl + '/lines.json'; // Static file, format as needed for display
+	$.ajax({url: url, success: lines_loadDatagrid_success});
+}
+
 function stops_loadDatagrid_success(data, textStatus, jqXHR)
 {
 	var datagrid = $('#stops-results tbody');
@@ -32,4 +38,13 @@ function stops_loadDatagrid_success(data, textStatus, jqXHR)
 	console.log('context:', context);
 	var html = template(context);
 	$('#stops-results').append(html).rowlink();
+}
+
+function lines_loadDatagrid_success(data, textStatus, jqXHR)
+{
+	var source = $('#lines-results-template').html();
+	var template = Handlebars.compile(source);
+	var context = {data: data};
+	var html = template(context);
+	$('#lines-results').append(html).rowlink();
 }

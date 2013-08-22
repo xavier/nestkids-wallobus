@@ -91,3 +91,9 @@ body.with-alertbar {
 #stops-results .label {
   font-size: inherit !important;
 }
+
+/* Lines */
+.badge { font-size: inherit !important;}
+.ligne { text-align: center; padding: 10px 20px 10px 20px; }
+.direction { text-align: right; font-weight: bold; font-size: 12pt; }
+.horaire { margin: 20px 20px 10px 0px; }
