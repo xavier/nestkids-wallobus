@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Wallobus</title>
     <link href="vendor/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="vendor/jasny-bootstrap/bootstrap-rowlink.min.css" rel="stylesheet" media="screen">
     <link href="css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="vendor/html5shiv/3.6.2/html5shiv.min.js"></script>
@@ -47,8 +46,8 @@
       <tbody>
         {{#each data}}
           <tr class="row">
-            <td class="col-xs-6"><strong>{{name}}</strong></td>
-            <td class="col-xs-4">
+            <td class="col-xs-6 col1"><strong>{{name}}</strong></td>
+            <td class="col-xs-4 col2">
               {{#each lines}}
                 <span class="label label-danger">{{this}}</span>
               {{/each}}
