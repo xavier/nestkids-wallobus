@@ -64,41 +64,47 @@ body.with-alertbar {
   padding-bottom: 90px;
 }
 
-#carousel-intro {
-  background-color: #fff;
-  height: 260px;
+#searchbar {
   margin-bottom: 20px;
 }
-.carousel .carousel-caption {
-  color: #000;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
-}
-.carousel .carousel-control {
-  color: #3276B1;
-}
-.carousel .carousel-indicators li {
-  border-color: #3276B1;
-}
-.carousel .carousel-indicators li.active {
-  background-color: #3276B1;
+
+.table .label {
+  display: inline-block;
+  /*font-size: inherit !important;*/
+  padding-left: .3em; padding-right: .3em;
+  width: 2.5em;
 }
 
-#stops-results .col3 {
-  text-align: right;
-}
-#stops-results tbody .col1 {
+#stops-datagrid tbody .col1 {
   font-weight: bold;
 }
-#stops-results .label {
-  font-size: inherit !important;
+#stops-datagrid .col3 {
+  text-align: right;
 }
 
+#stops-lines-datagrid .badge {
+  font-size: inherit;
+}
+#stops-lines-datagrid .col1,
+#stops-lines-datagrid .col2 {
+  padding: 20px 10px;
+}
+#stops-lines-datagrid .col1 {
+  text-align: center;
+}
+#stops-lines-datagrid .col1 h2 {
+  margin: 0;
+}
+#stops-lines-datagrid .col2 {
+  font-weight: bold;
+  font-size: 12pt;
+  text-align: right;
+}
 
-/* Lines */
-.badge { font-size: inherit !important;}
-.ligne { text-align: center; padding: 10px 20px 10px 20px; }
-.direction { text-align: right; font-weight: bold; font-size: 12pt; }
-.horaire { margin: 20px 20px 10px 0px; }
+#line-datagrid .col2 {
+  text-align: right;
+}
+
 
 /* rowlink */
 .clearfix{*zoom:1;}

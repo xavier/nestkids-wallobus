@@ -22,29 +22,42 @@ function stops_loadDatagrid()
 	$.ajax({url: url, success: stops_loadDatagrid_success});
 }
 
-function lines_loadDatagrid()
+function stopsLines_loadDatagrid()
 {
-	var url = apiRootUrl + '/lines.json'; // Static file, format as needed for display
-	$.ajax({url: url, success: lines_loadDatagrid_success});
+	var url = apiRootUrl + '/stops-lines.json'; // Static file, format as needed for display
+	$.ajax({url: url, success: stopsLines_loadDatagrid_success});
+}
+
+function line_loadDatagrid()
+{
+	var url = apiRootUrl + '/line.json'; // Static file, format as needed for display
+	$.ajax({url: url, success: line_loadDatagrid_success});
 }
 
 function stops_loadDatagrid_success(data, textStatus, jqXHR)
 {
 	var datagrid = $('#stops-results tbody');
 	var source = $('#stops-results-template').html();
-	console.log('source:', source);
 	var template = Handlebars.compile(source);
 	var context = {data: data};
-	console.log('context:', context);
 	var html = template(context);
 	$('#stops-results').append(html).rowlink();
 }
 
-function lines_loadDatagrid_success(data, textStatus, jqXHR)
+function stopsLines_loadDatagrid_success(data, textStatus, jqXHR)
 {
-	var source = $('#lines-results-template').html();
+	var source = $('#stops-lines-results-template').html();
 	var template = Handlebars.compile(source);
 	var context = {data: data};
 	var html = template(context);
-	$('#lines-results').append(html).rowlink();
+	$('#stops-lines-results').append(html).rowlink();
+}
+
+function line_loadDatagrid_success(data, textStatus, jqXHR)
+{
+	var source = $('#line-results-template').html();
+	var template = Handlebars.compile(source);
+	var context = data;
+	var html = template(context);
+	$('#line-results').append(html);
 }

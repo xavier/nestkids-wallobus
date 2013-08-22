@@ -1,24 +1,36 @@
 // Requires:
 // <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
-var geoloc = {}
+function findCurrentLocality(e)
+{
+  if (geoloc.supported) {
+    geoloc.findCurrentLocality(function(loc) {
+      if ($(e).val() === '') {
+        $(e).val(loc);
+      }
+    });
+  }
+}
+
+
+var geoloc = {};
 
 if (navigator.geolocation) {
-  geoloc.supported = true
+  geoloc.supported = true;
 
   geoloc.locate = function(success) {
 
     var error = function() {
-      console.log("geolocation failed")
-    }
+      console.log("geolocation failed");
+    };
 
     navigator.geolocation.getCurrentPosition(success, error);
-  }
+  };
 
 } else {
 
-  console.log("geolocation not supported")
-  geoloc.supported = false
+  console.log("geolocation not supported");
+  geoloc.supported = false;
 
 }
 
@@ -28,7 +40,7 @@ geoloc.reverseGeocoding = function(lat, lng, callback) {
 
   var request = {
     'latLng': new google.maps.LatLng(lat, lng)
-  }
+  };
 
   geoloc._geocoder.geocode(request, function (results, status) {
 
@@ -43,7 +55,7 @@ geoloc.reverseGeocoding = function(lat, lng, callback) {
 
   });
 
-}
+};
 
 // callback (location, reverseGeocodingResult)
 geoloc.perform = function(callback) {
@@ -52,10 +64,11 @@ geoloc.perform = function(callback) {
       console.log("Geolocation: ", location);
       geoloc.reverseGeocoding(location.coords.latitude, location.coords.longitude, function(results) {
         callback(location, results);
-      })
+      });
     });
   }
-}
+};
+
 //
 geoloc.findCurrentLocality = function(callback) {
   geoloc.perform(function(loc, res) {
@@ -74,7 +87,7 @@ geoloc.findCurrentLocality = function(callback) {
       console.log("Found:", locality);
       callback(locality);
     } else {
-      consolor.log("Locality not found")
+      consolor.log("Locality not found");
     }
-  })
-}
+  });
+};

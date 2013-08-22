@@ -21,7 +21,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-4 col-md-4 btn-left">
-            <a id="btn-back" class="btn btn-default navbar-btn" href="index.html"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a id="btn-back" class="btn btn-default navbar-btn" href="stops.html"><i class="glyphicon glyphicon-chevron-left"></i></a>
           </div>
           <div class="col-xs-4 col-md-4 brand-col">
             <a class="navbar-brand" href="index.html"><strong>WalloBus</strong></a></div>
@@ -33,30 +33,21 @@
     </nav>
 
     <div class="container">
-      <form id="searchbar" class="row" role="form">
-        <div class="col-xs-10 col-md-11">
-          <input id="search" class="form-control" type="search" placeholder="Recherchez">
-        </div>
-        <div class="col-xs-2 col-md-1">
-          <button id="search-geoloc" class="btn btn-default pull-right"><i class="glyphicon glyphicon-screenshot"></i></button>
-        </div>
-      </form>
-
-      <div id="stops-results"></div>
+      <div id="stops-lines-results"></div>
     </div>
 
-    <script id="stops-results-template" type="text/x-handlebars-template">
-      <table id="stops-datagrid" class="table table-striped" data-provides="rowlink">
+    <script id="stops-lines-results-template" type="text/x-handlebars-template">
+      <table id="stops-lines-datagrid" class="table" data-provides="rowlink">
         <tbody>
           {{#each data}}
-            <tr class="row">
-              <td class="col1 col-xs-6"><a href="stops-lines.html">{{name}}</a></td>
-              <td class="col2 col-xs-4">
-                {{#each lines}}
-                  <span class="label label-danger">{{this}}</span>
-                {{/each}}
+            <tr>
+              <td class="col1 col-xs-4">
+                <h2><a href="line.html"><span class="badge">{{number}}</span></a></h2>
               </td>
-              <td class="col3 col-xs-2">{{distance}} km</td>
+              <td class="col2 col-xs-8 direction">
+                {{direction}}<br>
+                {{time}}
+              </td>
             </tr>
           {{/each}}
         </tbody>
@@ -71,13 +62,10 @@
     <script src="vendor/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="vendor/jasny-bootstrap/bootstrap-rowlink.min.js"></script>
     <script src="vendor/handlebars/1.0.0/handlebars.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="js/main.js"></script>
-    <script src="js/geoloc.js"></script>
     <script>
       $(document).ready(function() {
-        stops_loadDatagrid();
-        $('#search-geoloc').click(function(ev) { ev.preventDefault(); findCurrentLocality('#search'); });
+        stopsLines_loadDatagrid();
       });
     </script>
   </body>

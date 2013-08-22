@@ -1,0 +1,17 @@
+{
+  "id": "71",
+  "name": "Manage - Soignies",
+  "stops": [
+    {"name": "SOIGNIES Hôpital", "time": "14:49"},
+    {"name": "SOIGNIES Place du Jeu de Balle", "time": "14:50"},
+    {"name": "SOIGNIES Belle Vue", "time": "14:51"},
+    {"name": "SOIGNIES Gare", "time": "14:53"},
+    {"name": "SOIGNIES Eglise des Carmes", "time": "14:55"},
+    {"name": "SOIGNIES Les Trois Tilleuls", "time": "14:56"},
+    {"name": "SOIGNIES Habitation N° 379", "time": "14:57"},
+    {"name": "NAAST Escarmotte", "time": "14:58"},
+    {"name": "NAAST Château Baillon", "time": "14:59"},
+    {"name": "NAAST Monument", "time": "15:00"},
+    {"name": "NAAST Place", "time": "15:00"}
+  ]
+}
