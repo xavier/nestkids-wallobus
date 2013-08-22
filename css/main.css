@@ -6,7 +6,11 @@ body {
   text-align: right;
 }
 
+.navbar {
+  background-color: #E5352D;
+}
 .navbar > .container .navbar-brand {
+  color: #fff;
   display: block;
   float: none;
   font-weight: bold;
@@ -45,23 +49,29 @@ body {
   color: #ddd;
   text-decoration: none;
 }
-#alertbar.danger {
-  background-color: #D9534F;
-}
-#alertbar.info {
-  background-color: #5BC0DE;
-}
-#alertbar.primary {
-  background-color: #428BCA;
-}
-#alertbar.success {
-  background-color: #5CB85C;
-}
-#alertbar.warning {
-  background-color: #F0AD4E;
-}
 body.with-alertbar {
   padding-bottom: 90px;
+}
+
+#alertbar.danger,
+.badge-danger {
+  background-color: #D9534F;
+}
+#alertbar.info,
+.badge-info {
+  background-color: #5BC0DE;
+}
+#alertbar.primary,
+.badge-primary {
+  background-color: #428BCA;
+}
+#alertbar.success,
+.badge-success {
+  background-color: #5CB85C;
+}
+#alertbar.warning,
+.badge-warning {
+  background-color: #F0AD4E;
 }
 
 #searchbar {
