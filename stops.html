@@ -33,6 +33,10 @@
       </div>
     </nav>
 
+    <form>
+      <p><input id="search" type="search" class="form-control" placeholder="Recherchez"/></p>
+    </form>
+
     <div id="container" class="container">
       <div id="stops-results"></div>
     </div>
@@ -63,10 +67,23 @@
     <script src="vendor/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="vendor/jasny-bootstrap/bootstrap-rowlink.min.js"></script>
     <script src="vendor/handlebars/1.0.0/handlebars.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="js/main.js"></script>
+    <script src="js/geoloc.js"></script>
     <script>
       $(document).ready(function() {
         stops_loadDatagrid();
+
+        if (geoloc.supported) {
+          geoloc.findCurrentLocality(function(loc) {
+            if (loc) {
+              if ($('#search').val() == "") {
+                $('#search').val(loc);
+              }
+            }
+          })
+        }
+
       });
     </script>
   </body>
