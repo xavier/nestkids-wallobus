@@ -9,6 +9,7 @@ body {
 .navbar > .container .navbar-brand {
   display: block;
   float: none;
+  font-weight: bold;
   margin-left: 0;
   padding-left: 0; padding-right: 0;
   text-align: center;
@@ -91,3 +92,14 @@ body.with-alertbar {
 #stops-results .label {
   font-size: inherit !important;
 }
+
+/* rowlink */
+.clearfix{*zoom:1;}
+.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
+.clearfix:after{clear:both;}
+.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
+.input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+tr.rowlink td{cursor:pointer;}
+tr.rowlink td.nolink{cursor:auto;}
+.table tbody tr.rowlink:hover td{background-color:#F5F5F5;}
+a.rowlink{color:inherit;font:inherit;text-decoration:inherit;}

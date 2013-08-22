@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Wallobus</title>
     <link href="vendor/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="vendor/jasny-bootstrap/bootstrap-rowlink.min.css" rel="stylesheet" media="screen">
     <link href="css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="vendor/html5shiv/3.6.2/html5shiv.min.js"></script>
@@ -42,15 +41,15 @@
     <table id="stops-results" class="table table-striped" data-provides="rowlink">
       <thead>
         <tr>
-          <th class="col1 col-xs-5 col-md-5">Stop name</th>
-          <th class="col2 col-xs-5 col-md-5">Lines</th>
+          <th class="col1 col-xs-6 col-md-6">Stop name</th>
+          <th class="col2 col-xs-4 col-md-4">Lines</th>
           <th class="col3 col-xs-2 col-md-2">Distance</th>
         </tr>
       </thead>
       <tbody>
         {{#each data}}
           <tr>
-            <td class="col1"><a class="btn btn-xs btn-link" href="#">{{name}}</a></td>
+            <td class="col1"><a href="#">{{name}}</a></td>
             <td class="col2">
               {{#each lines}}
                 <span class="label label-primary">{{this}}</span>
