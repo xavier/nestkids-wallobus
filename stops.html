@@ -24,7 +24,8 @@
           <div class="col-xs-4 col-md-4 btn-left">
             <a id="btn-back" class="btn btn-default navbar-btn" href="index.html"><i class="glyphicon glyphicon-chevron-left"></i></a>
           </div>
-          <div class="col-xs-4 col-md-4 brand-col"><a class="navbar-brand" href="index.html">Wallobus</a></div>
+          <div class="col-xs-4 col-md-4 brand-col">
+            <a class="navbar-brand" href="index.html"><strong>WalloBus</strong></a></div>
           <div class="col-xs-4 col-md-4 btn-right">
             <a id="btn-back" class="btn btn-default navbar-btn" href="account.html"><i class="glyphicon glyphicon-cog"></i></a>
           </div>
@@ -33,30 +34,21 @@
     </nav>
 
     <div id="container" class="container">
-      <h1 class="hidden-xs">Stops</h1>
-
       <div id="stops-results"></div>
     </div>
 
   <script id="stops-results-template" type="text/x-handlebars-template">
     <table id="stops-results" class="table table-striped" data-provides="rowlink">
-      <thead>
-        <tr>
-          <th class="col1 col-xs-5 col-md-5">Stop name</th>
-          <th class="col2 col-xs-5 col-md-5">Lines</th>
-          <th class="col3 col-xs-2 col-md-2">Distance</th>
-        </tr>
-      </thead>
       <tbody>
         {{#each data}}
-          <tr>
-            <td class="col1"><a class="btn btn-xs btn-link" href="#">{{name}}</a></td>
-            <td class="col2">
+          <tr class="row">
+            <td class="col-xs-6"><strong>{{name}}</strong></td>
+            <td class="col-xs-4">
               {{#each lines}}
-                <span class="label label-primary">{{this}}</span>
+                <span class="label label-danger">{{this}}</span>
               {{/each}}
             </td>
-            <td class="col3">{{distance}}km</td>
+            <td class="col-xs-2"><strong>{{distance}} km</strong></td>
           </tr>
         {{/each}}
       </tbody>
