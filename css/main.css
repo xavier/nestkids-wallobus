@@ -1,0 +1,83 @@
+body {
+  padding-top: 70px; padding-bottom: 30px;
+}
+
+.right {
+  text-align: right;
+}
+
+.navbar > .container .navbar-brand {
+  display: block;
+  float: none;
+  margin-left: 0;
+  padding-left: 0; padding-right: 0;
+  text-align: center;
+}
+.navbar .btn-left {
+  padding-right: 0;
+}
+.navbar .btn-right {
+  padding-left: 0;
+  text-align: right;
+}
+.navbar .brand-col {
+  padding-left: 0; padding-right: 0;
+}
+.navbar .navbar-brand i {
+  font-size: 15px;
+  height: 20px !important;
+}
+
+#alertbar {
+  background-color: #999;
+  color: #fff;
+  padding: 5px 15px;
+  position: fixed;
+  bottom: 0px; right: 0; left: 0;
+  z-index: 1050;
+}
+#alertbar a {
+  color: #fff;
+  text-decoration: underline;
+}
+#alertbar a:hover {
+  color: #ddd;
+  text-decoration: none;
+}
+#alertbar.danger {
+  background-color: #D9534F;
+}
+#alertbar.info {
+  background-color: #5BC0DE;
+}
+#alertbar.primary {
+  background-color: #428BCA;
+}
+#alertbar.success {
+  background-color: #5CB85C;
+}
+#alertbar.warning {
+  background-color: #F0AD4E;
+}
+body.with-alertbar {
+  padding-bottom: 90px;
+}
+
+#carousel-intro {
+  background-color: #fff;
+  height: 260px;
+  margin-bottom: 20px;
+}
+.carousel .carousel-caption {
+  color: #000;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+.carousel .carousel-control {
+  color: #3276B1;
+}
+.carousel .carousel-indicators li {
+  border-color: #3276B1;
+}
+.carousel .carousel-indicators li.active {
+  background-color: #3276B1;
+}
