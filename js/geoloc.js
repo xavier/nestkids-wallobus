@@ -70,7 +70,11 @@ geoloc.findCurrentLocality = function(callback) {
         break;
       }
     }
-    console.log("Found:", locality);
-    callback(locality);
+    if (locality) {
+      console.log("Found:", locality);
+      callback(locality);
+    } else {
+      consolor.log("Locality not found")
+    }
   })
 }
